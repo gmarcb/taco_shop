@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tacos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Meat</th>
+      <th>Topping</th>
+      <th>Salsa</th>
+      <th>Cost</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tacos.each do |taco| %>
+      <tr>
+        <td><%= taco.name %></td>
+        <td><%= taco.meat %></td>
+        <td><%= taco.topping %></td>
+        <td><%= taco.salsa %></td>
+        <td><%= taco.cost %></td>
+        <td><img src="<%= taco.image %>"</td>
+        <td><%= link_to 'Show', taco %></td>
+        <td><%= link_to 'Edit', edit_taco_path(taco) %></td>
+        <td><%= link_to 'Destroy', taco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taco', new_taco_path %>

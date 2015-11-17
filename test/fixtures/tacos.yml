@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  meat: MyString
+  topping: MyText
+  salsa: MyText
+  cost: 1
+  image: MyString
+
+two:
+  name: MyString
+  meat: MyString
+  topping: MyText
+  salsa: MyText
+  cost: 1
+  image: MyString
